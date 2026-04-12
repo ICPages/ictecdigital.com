@@ -1,0 +1,394 @@
+/* Fuentes y colores */
+body {
+    font-family: 'Roboto Mono', monospace; /* Contenido */
+    color: #092a62;
+    background-color: #fefefe;
+}
+
+h1, h2, .orbitron {
+    font-family: 'Orbitron', sans-serif; /* Títulos */
+    color: #092a62;
+}
+
+strong, i, h4, h5, h6 {
+    color: #77b800;
+}
+
+/* Navbar fijo */
+.navbar {
+    background-color: #092a62;
+    transition: all 0.4s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.navbar .navbar-brand, .navbar .nav-link {
+    color: #77b800 !important;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #fefefe !important;
+    transform: scale(1.05);
+}
+
+.navbar .nav-link.active {
+    font-weight: 700;
+}
+
+/* Línea delgada con gradiente debajo del navbar */
+.navbar-gradient-line {
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #092a62, #77b800);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+    animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hero */
+#hero {
+    background: linear-gradient(135deg, #092a62, #77b800, #092a62, #77b800);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: #fefefe;
+    min-height: 100vh;
+    padding-top: 84px;
+}
+
+#hero .overlay {
+    position: absolute;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.35);
+}
+
+#hero h1 {
+    color: #fefefe;
+    font-size: 3rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Cards servicios, productos y blog */
+.service-card, .product-card, .blog-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fefefe;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 0px #77b800;
+}
+
+.service-card:hover, .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 0px 10px 0px #092a62;
+}
+
+#servicios a {
+    color: #092a62;
+}
+
+img {
+    border-radius: 15px;
+}
+
+/* Carrusel */
+#carouselProductos {
+    scroll-behavior: smooth;
+}
+
+/* Cada tarjeta ocupa ancho fijo */
+.carousel-item-custom {
+    min-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .carousel-item-custom {
+        min-width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-item-custom {
+        min-width: 33.3333%;
+    }
+}
+
+/* Botones */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: #092a62;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 90px;
+}
+
+.carousel-btn:hover {
+    background-color: #77b800;
+}
+
+/* Botones */
+.btn-success {
+    background-color: #092a62;
+    border-color: #fefefe;
+    border-radius: 15px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-success:hover {
+    background-color: #77b800;
+    border-color: #fefefe;
+    transform: scale(1.05);
+}
+
+/* Formularios y selects */
+form .form-label {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+}
+
+form .form-control, form .form-select, form textarea {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Enlaces redes sociales */
+#contacto a {
+    color: #092a62;
+    text-decoration: none;
+}
+
+#contacto a:hover {
+    color: #77b800;
+    text-decoration: none;
+}
+
+/* Animación suave */
+.form-control, .form-select {
+    border-radius: 15px;
+    border-color: #77b800;
+    transition: all 0.3s ease;
+}
+
+/* Hover más sutil */
+.form-control:hover, .form-select:hover {
+    border-color: #092a62;
+    box-shadow: 0px 0px 10px 0px #092a62;
+}
+
+/* Focus más marcado */
+.form-control:focus, .form-select:focus {
+    border-color: #092a62;
+    box-shadow: 0px 0px 10px 0px #092a62;
+}
+
+/* Footer */
+footer {
+    background-color: #092a62;
+    color: #fefefe;
+    font-family: 'Roboto Mono', monospace;
+}
+
+footer h4, footer h5 {
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+footer a {
+    color: #fefefe;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+    font-family: 'Roboto Mono', monospace;
+}
+
+footer a:hover {
+    color:#77b800;
+    text-decoration: underline;
+    transform: translateX(3px);
+    text-decoration: none;
+}
+
+footer ul {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    padding: 0;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+}
+
+.titulo-servicio {
+    color: #77b800;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* Quitar fondo blanco general */
+.accordion {
+    background-color: transparent;
+}
+
+/* Item */
+.accordion-item {
+    border-radius: 15px !important;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 0px 0px 10px 0px #77b800;
+    border: none !important;
+}
+
+/* Elimina estilos raros del primero y último */
+.accordion-item:first-of-type,
+.accordion-item:last-of-type {
+    border-radius: 15px !important;
+}
+
+/* Botón */
+.accordion-button {
+    border-radius: 15px !important;
+    box-shadow: none !important;
+    transition: 0.3s ease;
+    color: #092a62;
+}
+
+.accordion-button:hover {
+    color: #77b800;
+    background-color: #092a62;
+}
+
+.accordion-button:focus {
+   box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #77b800 !important;
+    background-color: #092a62 !important;
+}
+
+/* Flechita (opcional limpiar) */
+.accordion-button::after {
+    filter: brightness(0) invert(1); /* blanca */
+}
+
+/* Body */
+.accordion-body {
+    color: #092a62;
+    background-color: transparent;
+    border-top: none;
+}
+
+/* Logo circular */
+.logo-circular {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #77b800;
+    transition: 0.3s ease;
+}
+
+/* Hover efecto */
+.logo-link:hover .logo-circular {
+    transform: scale(1.08);
+    box-shadow: 0px 0px 15px #092a62;
+}
+
+/* Texto */
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-link p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.marcas-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* TRACK */
+.marcas-track {
+    display: flex;
+    width: max-content;
+    animation: scrollMarcas 30s linear infinite;
+}
+
+/* LOGOS */
+.marcas-track img {
+    height: 55px;
+    margin: 0 30px;
+    flex-shrink: 0;
+    object-fit: contain;
+
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: 0.3s ease;
+}
+
+.marcas-track img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* 🔥 CLAVE REAL */
+@keyframes scrollMarcas {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-33.333%);
+    }
+}
